@@ -1,10 +1,10 @@
-//cpu scheduling using spn
+//cpu scheduling using spn(excluding arrival time)
 #include<stdio.h>
 #include<stdlib.h>
 struct process
 {
   char name[3];
-  int at,st,wt;
+  int st,wt;
  }pro[100],temp;
 int main()
 {
@@ -18,11 +18,7 @@ int main()
   {
     fgets(pro[j].name,sizeof(pro[j].name),stdin);
     }
-  printf("Enter the arrival time\n");
-  for(i=0;i<n;i++)
-  {
-    scanf("%d",&pro[i].at);
-    }
+  printf("The arrival time is defaulted to 0\n);
     
   printf("Enter the service time\n");  
   for(i=0;i<n;i++)
@@ -50,14 +46,14 @@ int main()
     {
      x=x+pro[j-1].st;
     }
-    pro[i].wt=x-pro[i].at;
+    pro[i].wt=x;
   
   }
   tot_wt=0;
    for(i=0;i<n;i++)
    {
       tot_wt+=pro[i].wt;
-      printf(" Process Name:%s Arrival time: %d Service time: %d Waiting time: %d\n",pro[i].name,pro[i].at,pro[i].st,pro[i].wt);
+      printf(" Process Name:%s Service time: %d Waiting time: %d\n",pro[i].name,pro[i].st,pro[i].wt);
    } 
    avg_wt=(float)tot_wt/n;
    printf("Average waiting time: %f\n",avg_wt);
