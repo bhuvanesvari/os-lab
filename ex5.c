@@ -1,3 +1,4 @@
+//simple producer consumer problem
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
