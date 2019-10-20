@@ -3,10 +3,10 @@
 #include<stdlib.h>
 int main()
 {
-  char pro[]={'A','B','C'};
   int i;
-  int st[10],temp[10],wt[1];
-  int tq,t,flag,n,avg_wt;
+  int st[10],temp[10],wt[10];
+  int tq,t,flag,n;
+  float avg_wt;
   flag=0;// not completed
   printf("Enter the total number of processes(Arrival time is 0)\n");
   scanf("%d",&n);
@@ -56,7 +56,7 @@ int main()
     printf("%d\n",wt[i]);
   }
    avg_wt=avg_wt/n;
-   printf("The average waiting time is %d\n",avg_wt);
+   printf("The average waiting time is %f\n",avg_wt);
    
    return 0;
   
