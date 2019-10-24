@@ -201,8 +201,3 @@ void display(int nh,int hol[10])
  printf("\nHoles:");int i=0;
  for(i=0;i<nh;i++){printf("%d\t",hol[i]);}
 }
-Email This
-BlogThis!
-Share to Twitter
-Share to Facebook
-Share to Pinterest
